@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MCPE Fun – Minecraft PE Server & Store</title>
+<meta name="description" content="Free Minecraft Pocket Edition server for survival and minigames. Join at play.mcpefun.net, port 19132. Ranks and crate keys in the store.">
+<link rel="canonical" href="__SITE__/">
+<meta property="og:type" content="website"><meta property="og:title" content="MCPE Fun – Minecraft PE Server"><meta property="og:description" content="Survival, minigames and a friendly community. Join free at play.mcpefun.net, port 19132."><meta property="og:image" content="__SITE__/og.png"><meta property="og:url" content="__SITE__/">
+<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#070a18">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><div class="wrap">
+ <a class="logo" href="#top">MCPE FUN</a>
+ <nav><a href="#features">Features</a><a href="#store">Store</a><a href="#players">Players</a><a href="#vote">Vote</a><a href="#join">Join</a><a href="#faq">FAQ</a>
+ <a class="btn sm discord" id="dc" href="https://discord.gg/yourinvite" target="_blank" rel="noopener" aria-label="Join our Discord">Discord</a>
+ <div class="tp"><button class="btn ghost sm" id="themeBtn" aria-haspopup="true" aria-expanded="false">Theme</button>
+  <div class="pop" id="pop" hidden>
+   <p>Accent color</p>
+   <div class="sw">
+    <button data-accent="cyan" style="background:#00b8ff" aria-label="Cyan"></button>
+    <button data-accent="green" style="background:#22c55e" aria-label="Green"></button>
+    <button data-accent="purple" style="background:#a78bfa" aria-label="Purple"></button>
+    <button data-accent="orange" style="background:#fb923c" aria-label="Orange"></button>
+    <button data-accent="pink" style="background:#f472b6" aria-label="Pink"></button>
+   </div>
+   <p>Mode</p>
+   <div class="seg"><button data-mode="dark">Dark</button><button data-mode="light">Light</button></div>
+  </div></div>
+ <button class="btn sm" id="openCart" aria-label="Open cart">Cart (<span id="count">0</span>)</button></nav>
+</div></header>
+<main id="top">
+<div class="hero"><div class="wrap">
+ <span class="badge"><span class="dot" id="sdot"></span><span id="stxt">Minecraft Pocket Edition server</span></span>
+ <h1>MCPE FUN</h1>
+ <p class="lead">Survival, minigames and a friendly community. Joining is free; ranks and keys fund hosting.</p>
+ <div class="ip"><div><small>Server address · Port 19132</small><b id="ipText">play.mcpefun.net</b></div><button class="btn sm" id="copy">Copy IP</button></div>
+ <div class="cta"><a class="btn" href="#join">How to join</a><a class="btn ghost" href="#store">Visit store</a></div>
+ <div class="stats">
+  <div class="stat"><b id="online">–</b><span>Online</span></div>
+  <div class="stat"><b>Free</b><span>To join</span></div>
+  <div class="stat"><b>3</b><span>Ranks</span></div>
+  <div class="stat"><b>3</b><span>Key packs</span></div>
+ </div>
+</div></div>
+
+<section id="features" class="alt"><div class="wrap">
+ <div class="head"><h2>Why players choose MCPE Fun</h2><p>A stable server run by people who play it every day.</p></div>
+ <div class="grid">
+  <div class="card"><div class="ico"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div><h3>Protected gameplay</h3><p>Anti-cheat and land protection keep your builds and progress safe.</p></div>
+  <div class="card"><div class="ico"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><h3>Survival and minigames</h3><p>Switch between long-term survival and quick matches from one lobby.</p></div>
+  <div class="card"><div class="ico"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6M17 5a3.5 3.5 0 010 7M22 20c0-3-1.5-5-4-5.7"/></svg></div><h3>Active staff</h3><p>Moderators are online to answer questions and handle reports quickly.</p></div>
+  <div class="card"><div class="ico"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Smooth connection</h3><p>Hosted for low lag on phones, tablets and consoles.</p></div>
+ </div></div></section>
+
+<section id="store"><div class="wrap">
+ <div class="head"><h2>Server store</h2><p>Choose a rank or crate keys. Items apply to your in-game name after checkout.</p></div>
+ <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-tab="ranks">Ranks</button><button role="tab" aria-selected="false" data-tab="keys">Crate keys</button></div>
+ <div class="grid" id="products"></div>
+</div></section>
+
+<section id="compare" class="alt"><div class="wrap">
+ <div class="head"><h2>Compare ranks</h2><p>Every rank is permanent. Higher ranks include everything below them.</p></div>
+ <div class="tw"><table><thead><tr><th scope="col">Perk</th><th scope="col">VIP</th><th scope="col">MVP</th><th scope="col">Elite</th></tr></thead><tbody>
+ <tr><th scope="row">Colored chat name</th><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+ <tr><th scope="row">Homes</th><td>2</td><td>5</td><td>10</td></tr>
+ <tr><th scope="row">Daily kit</th><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+ <tr><th scope="row">Fly in lobby</th><td class="n">–</td><td class="y">✓</td><td class="y">✓</td></tr>
+ <tr><th scope="row">Priority queue</th><td class="n">–</td><td class="y">✓</td><td class="y">✓</td></tr>
+ <tr><th scope="row">Custom particles</th><td class="n">–</td><td class="n">–</td><td class="y">✓</td></tr>
+ <tr><th scope="row">Exclusive pets</th><td class="n">–</td><td class="n">–</td><td class="y">✓</td></tr>
+ <tr><th scope="row">Price</th><td>$4.99</td><td>$9.99</td><td>$19.99</td></tr>
+ <tr><td></td><td><button class="btn sm" data-id="vip">Add VIP</button></td><td><button class="btn sm" data-id="mvp">Add MVP</button></td><td><button class="btn sm" data-id="elite">Add Elite</button></td></tr>
+ </tbody></table></div></div></section>
+
+<section id="players"><div class="wrap">
+ <div class="head"><h2>Players and staff</h2><p>Top players update every few minutes.</p></div>
+ <div class="two">
+  <div class="card"><div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-by="playtime">Playtime</button><button role="tab" aria-selected="false" data-by="kills">Kills</button><button role="tab" aria-selected="false" data-by="wins">Wins</button></div>
+   <div class="tw"><table class="lb"><thead><tr><th scope="col">#</th><th scope="col">Player</th><th scope="col" id="lbCol">Hours played</th></tr></thead><tbody id="lbBody"><tr><td colspan="3" class="empty">Loading…</td></tr></tbody></table></div></div>
+  <div class="card"><h3>Staff</h3><ul class="staff" id="staffList"></ul><p>Ask any staff member in-game or on Discord.</p></div>
+ </div></div></section>
+
+<section id="vote" class="alt"><div class="wrap">
+ <div class="head"><h2>Vote for the server</h2><p id="voteReward">Vote on each site once a day to support MCPE Fun.</p></div>
+ <div class="grid" id="voteList"></div>
+ <p class="empty" style="margin-top:18px">Enter your exact in-game name on the voting site so the reward reaches you.</p>
+</div></section>
+
+<section id="join"><div class="wrap">
+ <div class="head"><h2>How to join</h2><p>Connect from Minecraft Pocket Edition in three steps.</p></div>
+ <ol class="steps">
+  <li><b>Open Minecraft</b><span>Tap Play, then open the Servers tab.</span></li>
+  <li><b>Add the server</b><span>Enter a name, then the address and port 19132.</span></li>
+  <li><b>Connect and play</b><span>Tap the server. Ranks appear automatically after purchase.</span></li>
+ </ol></div></section>
+
+<section id="faq" class="alt"><div class="wrap">
+ <div class="head"><h2>Frequently asked questions</h2></div>
+ <details><summary>Is the server free to join?</summary><p>Yes. Every player can join and play for free. Store items are optional.</p></details>
+ <details><summary>When do I get my rank?</summary><p>Ranks are applied to your in-game name right after your purchase is confirmed.</p></details>
+ <details><summary>Which devices can connect?</summary><p>Any device running Minecraft Pocket Edition or Bedrock, including phones, tablets and consoles that support custom servers.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="fg">
+  <div><a class="logo" href="#top" style="margin-bottom:12px">MCPE Fun</a><p>A community Minecraft PE server for survival and minigames.</p></div>
+  <div><h3>Explore</h3><a href="#features">Features</a><a href="#store">Store</a><a href="#join">How to join</a></div>
+  <div><h3>Support</h3><a href="#faq">FAQ</a><a href="/rules.html">Rules and terms</a><p>Ask staff in-game for help.</p></div>
+ </div>
+ <div class="legal">© <span id="yr"></span> MCPE Fun. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+</div></footer>
+
+<aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+ <div class="dh"><h3>Your cart</h3><button class="x" id="closeCart" aria-label="Close cart">×</button></div>
+ <div id="items"></div>
+ <div class="total"><span>Total</span><span id="total">$0.00</span></div>
+ <label for="tag">In-game name</label><input id="tag" type="text" placeholder="e.g. Steve123" autocomplete="off" maxlength="16">
+ <label for="tag2">Confirm in-game name</label><input id="tag2" type="text" placeholder="Type it again" autocomplete="off" maxlength="16"><p class="msg" id="nameHint" style="margin:-8px 0 8px"></p>
+ <label for="code">Coupon or gift code</label><div style="display:flex;gap:8px"><input id="code" type="text" placeholder="Optional" autocomplete="off"><button class="btn ghost sm" id="applyCode" type="button" style="height:46px;margin-top:6px">Apply</button></div>
+ <label style="display:flex;gap:10px;align-items:flex-start;margin-bottom:14px"><input id="terms" type="checkbox" style="width:auto;margin:4px 0 0"><span>I agree to the <a href="/rules.html" target="_blank">rules and terms</a>.</span></label>
+ <button class="btn" id="checkout">Checkout</button><p class="msg" id="msg" role="status"></p>
+</aside>
+
+<div id="toast" class="toast" role="status" hidden></div>
+<script src="script.js"></script>
+</body></html>
